@@ -1,7 +1,7 @@
 import React,{Fragment ,useState} from 'react'
 import Searchbox from './Searchbox'
-
 import { FaAlignRight,FaTimes } from "react-icons/fa";
+import SubMenuLinks from './SubMenuLinks'
 function Navlinks() {
   
   const [Menuclick, setMenuclick] = useState(false)
@@ -17,38 +17,78 @@ function Navlinks() {
 }
 window.addEventListener('resize' ,Setfixed)
   const links = [
-    {name:'Women Ethnic',
+    {name:'Smartphones',
     sublinks:[
-      { sname:'topwears',
-       sname1:'top war2',
-       sname2:'top war2',
-       sname3:'top war2',
-       sname4:'top war2',}
-    ]
-  } ,
-    {name:'Women Ethnic'},
-    {name:'Women Ethnic',
-    sublinks:[
-      { sname:'topwears',
-       sname1:'top war2'}
-    ]
-  },
-  {name:'Women Ethnic'},
-  {name:'Women Ethnic'},
-  {name:'Women Ethnic',
+      {Heads:'View All',
+       Submenu:[
+        { sname:'Sumsung',
+        sname1:'Nokia',
+        sname2:'Oppo',
+        sname3:'Xiaomi',
+        sname4:'Oneplus',
+        sname5:'Vivo',
+        sname6:'Motorola',}
+       ]}]} ,
+  {name:'Laptops',
   sublinks:[
-    { sname:'topwears',
-     sname1:'top war2'}
+    {Heads:'View All',
+    Submenu:[
+      {   sname:'Lenevo',
+      sname1:'Acer',
+      sname2:'Asus',
+      sname3:'Macbook',
+      sname4:'Dell',
+      sname5:'Apple',
+      sname6:'Hp',}
+     ]} ]
+} ,
+{name:'Fragrances',
+  sublinks:[
+    {Heads:'View All',
+    Submenu:[
+      {   sname:'Lavender',
+      sname1:'Chanel'}
+     ]} ]
+} ,
+{name:'Groceries',
+  sublinks:[
+    {Heads:'View All',} ]
+} ,
+{name:'Beauty & Healt',
+  sublinks:[
+    {Heads:'View All',} ]
+} ,
+{name:'Skincare',
+  sublinks:[
+    {Heads:'View All',
+    Submenu:[
+      { sname:'CeraVe',
+      sname1:'Cleaner',
+     sname2:'Toner',}
+     ]} ]
+} ,
+{name:'Home-decoration',
+  sublinks:[
+    {Heads:'View All',
+  } ]
+} ,
+{name:'Electronics',
+  sublinks:[
+    {Heads:'View All',
+  } ]
+} ,
+{name:'Sarees',
+  sublinks:[
+    {Heads:'View All',
+    Submenu:[
+      {   sname:'Indian',
+      sname1:'Western',
+    sname2:'Banarasi',
+  sname3:'Kerala'}
+     ]} ]
+} ,
   ]
-},
-{name:'Women Ethnic'},
-{name:'Women Ethnic',
-sublinks:[
-  { sname:'topwears',
-   sname1:'top war2'}
-]
-},
-]
+
   return (
   <Fragment>
 
@@ -59,23 +99,31 @@ sublinks:[
 {
   links.map((ele,index)=>{
 return(
-  <div className='px-6 py-2  group' key={index}>
-<a href='#' >{ele.name}</a>
+  <div className='px-6 pt-6  pb-0 group' key={index}>
+<a href='#' className=" font-semibold text-slate-800 hover:text-pinkbase hover:font-bold"  >{ele.name}</a>
 {ele.sublinks && 
-  <ul className={fix ?'navlinks bg-white border shadow-md rounded-md border-slate-200 py-8 top-30 hidden group-hover:block' : 'absolute w-full bg-white border shadow-md rounded-md border-slate-200 py-8 top-30 hidden group-hover:block' }>
+  <ul className={fix ?'navlinks bg-white border shadow-md rounded-md border-slate-200 py-8 top-30 hidden group-hover:block' : 'absolute w-full bg-white border shadow-md rounded-md border-slate-200 py-12 top-31 hidden group-hover:block' }>
  {ele.sublinks.map((old ,ind)=>{
   return(
-    <div className='px-12 grid grid-cols-2' style={{zIndex:9}} key={ind}>
-    <a href='#'><li className='py-3 '>{old.sname}</li></a>  
- <a href='#' ><li className='py-3'>{old.sname1}</li></a>
-   <a href='#'> <li className='py-3'>{old.sname2}</li></a>
-   <a href='#' ><li className='py-3'>{old.sname3}</li></a>
-   <a href='#' ><li className='py-3'>{old.sname4}</li></a>
-    </div>
+    <Fragment>
+    <li className="py-2 bg-slate-200">{old.Heads}</li>
+    {old.Submenu && <div>
+{
+  old.Submenu.map((submenu,index)=>{
+    return(
+    <SubMenuLinks submenu = {submenu} key = {index}/>
+    )
+  })
+}
+</div>
+    }
+    </Fragment>
   )
  })}
   </ul>
+   
 }
+
 </div>
 )
   })
