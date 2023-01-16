@@ -1,16 +1,16 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 
-function SubMenuLinks({submenu ,key}) {
+function SubMenuLinks({submenu ,keys,setMenuclick,Menuclick}) {
   return (
    
-    <div key={key} className='px-4 grid grid-cols-1 font-semibold text-greybase' style={{zIndex:9}}>
-    <a href='#'><li className='py-3  hover:text-slate-600 mx-4'>{submenu.sname}</li></a>  
-   <a href='#' ><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname1}</li></a>
-   <a href='#'> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname2}</li></a>
-   <a href='#' ><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname3}</li></a>
-   <a href='#' ><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname4}</li></a>
-   <a href='#'> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname5}</li></a>
-   <a href='#'> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname6}</li></a>
+    <div key={keys} className='px-4 grid grid-cols-3 font-semibold text-greybase' style={{zIndex:9999999}}>
+    <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)}><li className='py-3  hover:text-slate-600 mx-4'>{submenu.sname}</li></a>  
+   <a href='/' aria-label='sub menu links'  onClick={()=>setMenuclick(!Menuclick)}><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname1}</li></a>
+   <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)}> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname2}</li></a>
+   <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)} ><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname3}</li></a>
+   <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)} ><li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname4}</li></a>
+   <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)}> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname5}</li></a>
+   <a href='/' aria-label='sub menu links' onClick={()=>setMenuclick(!Menuclick)}> <li className='py-3 hover:text-slate-600 mx-4'>{submenu.sname6}</li></a>
 
     </div>
 

@@ -2,6 +2,7 @@ import React,{Fragment ,useState} from 'react'
 import Searchbox from './Searchbox'
 import { FaAlignRight,FaTimes } from "react-icons/fa";
 import SubMenuLinks from './SubMenuLinks'
+import { Link} from 'react-router-dom';
 function Navlinks() {
   
   const [Menuclick, setMenuclick] = useState(false)
@@ -50,11 +51,11 @@ window.addEventListener('resize' ,Setfixed)
       sname1:'Chanel'}
      ]} ]
 } ,
-{name:'Groceries',
+{name:'Motorcycle',
   sublinks:[
     {Heads:'View All',} ]
 } ,
-{name:'Beauty & Healt',
+{name:'Mens-shirts',
   sublinks:[
     {Heads:'View All',} ]
 } ,
@@ -67,17 +68,18 @@ window.addEventListener('resize' ,Setfixed)
      sname2:'Toner',}
      ]} ]
 } ,
-{name:'Home-decoration',
+{name:'Lighting',
   sublinks:[
     {Heads:'View All',
   } ]
 } ,
-{name:'Electronics',
+
+{name:'Womens-dresses',
   sublinks:[
     {Heads:'View All',
   } ]
 } ,
-{name:'Sarees',
+{name:'Sunglasses',
   sublinks:[
     {Heads:'View All',
     Submenu:[
@@ -100,18 +102,18 @@ window.addEventListener('resize' ,Setfixed)
   links.map((ele,index)=>{
 return(
   <div className='px-6 pt-6  pb-0 group' key={index}>
-<a href='#' className=" font-semibold text-slate-800 hover:text-pinkbase hover:font-bold"  >{ele.name}</a>
+<span  className="cursor-pointer font-semibold text-slate-800 hover:text-pinkbase hover:font-bold"  >{ele.name}</span>
 {ele.sublinks && 
-  <ul className={fix ?'navlinks bg-white border shadow-md rounded-md border-slate-200 py-8 top-30 hidden group-hover:block' : 'absolute w-full bg-white border shadow-md rounded-md border-slate-200 py-12 top-31 hidden group-hover:block' }>
+  <ul className={fix ?'navlinks bg-white border shadow-md rounded-md border-slate-200 py-8 top-30 hidden group-hover:block' : 'absolute w-auto bg-white border shadow-md rounded-md border-slate-200 py-12 top-31 hidden group-hover:block' }>
  {ele.sublinks.map((old ,ind)=>{
   return(
     <Fragment>
-    <li className="py-2 bg-slate-200">{old.Heads}</li>
+   <Link to={`/product-list/${ele.name}`}  onClick={()=>setMenuclick(!Menuclick)}><li key={ind} className="py-2 bg-slate-200 px-4">{old.Heads}</li></Link> 
     {old.Submenu && <div>
 {
   old.Submenu.map((submenu,index)=>{
     return(
-    <SubMenuLinks submenu = {submenu} key = {index}/>
+    <SubMenuLinks Menuclick = {Menuclick} setMenuclick ={setMenuclick} submenu = {submenu} key = {index}/>
     )
   })
 }
