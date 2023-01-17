@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Fragment>
-    <Router>
+    <Router basename="/meesho-ui">
     <Header />
     <Routes>
     <Route exact  path="/" element={<Home/>} />
