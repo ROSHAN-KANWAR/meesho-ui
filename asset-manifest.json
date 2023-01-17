@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/meesho-ui/static/css/main.6b7264ed.css",
-    "main.js": "/meesho-ui/static/js/main.56038a28.js",
+    "main.js": "/meesho-ui/static/js/main.c6ddc81b.js",
     "static/js/787.3dce9a58.chunk.js": "/meesho-ui/static/js/787.3dce9a58.chunk.js",
     "static/media/women.webp": "/meesho-ui/static/media/women.e5e144f20b698f909da8.webp",
     "static/media/MainImg.webp": "/meesho-ui/static/media/MainImg.0b6754455aca7427bffe.webp",
@@ -9,11 +9,11 @@
     "static/media/mens.webp": "/meesho-ui/static/media/mens.3d957b66e93576f54fc9.webp",
     "index.html": "/meesho-ui/index.html",
     "main.6b7264ed.css.map": "/meesho-ui/static/css/main.6b7264ed.css.map",
-    "main.56038a28.js.map": "/meesho-ui/static/js/main.56038a28.js.map",
+    "main.c6ddc81b.js.map": "/meesho-ui/static/js/main.c6ddc81b.js.map",
     "787.3dce9a58.chunk.js.map": "/meesho-ui/static/js/787.3dce9a58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b7264ed.css",
-    "static/js/main.56038a28.js"
+    "static/js/main.c6ddc81b.js"
   ]
 }
