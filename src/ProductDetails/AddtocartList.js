@@ -20,7 +20,7 @@ const AddtocartList = () => {
           <tbody>
             <tr>
               <td class="p-4 px-6 text-center whitespace-nowrap flex items-center">
-             <img src={MainImg} className="w-12 h-12"/>
+             <img src={MainImg} className="w-12 h-12" alt="cart details "/>
             <span className="mx-2">Iphone 11</span>
               </td>
               <td class="p-4 px-6 text-center whitespace-nowrap">
@@ -57,7 +57,7 @@ const AddtocartList = () => {
             </tr>
             <tr>
              <td class="p-4 px-6 text-center whitespace-nowrap flex items-center">
-             <img src={MainImg} className="w-12 h-12"/>
+             <img src={MainImg} className="w-12 h-12" alt="cart details "/>
             <span className="mx-2">Iphone 11</span>
               </td>
               <td class="p-4 px-6 text-center whitespace-nowrap">
@@ -94,7 +94,7 @@ const AddtocartList = () => {
             </tr>
             <tr>
               <td class="p-4 px-6 text-center whitespace-nowrap flex items-center">
-             <img src={MainImg} className="w-12 h-12"/>
+             <img src={MainImg} className="w-12 h-12" alt="cart details "/>
             <span className="mx-2">Iphone 11</span>
               </td>
               <td class="p-4 px-6 text-center whitespace-nowrap">
