@@ -31,7 +31,7 @@ function Home() {
    <Content/>
      {/* main imsage*/}
     <div className='lg:w-1/2 md:w-1/2'>
-    <div>
+    <div >
     <img src={MainImg} alt ="online shopping main images"/>
     </div>
     </div>

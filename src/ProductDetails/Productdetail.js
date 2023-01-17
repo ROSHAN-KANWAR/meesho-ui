@@ -1,10 +1,11 @@
 import HomeapiFetch from '../Components/Home/HomeapiFetch'
 import React, { Fragment,useState,useEffect } from 'react';
 import axios from 'axios';
-import { FaShoppingCart ,FaCheckDouble ,FaRupeeSign} from "react-icons/fa";
+import {FaCheckDouble ,FaRupeeSign} from "react-icons/fa";
 import { useParams } from 'react-router-dom';
 import Productimage from './Productimage';
 import ProductStar from './ProductStar';
+import AddtoCart from './AddtoCart'
 function Productdetail() {
   const {id} = useParams();
   console.log(id)
@@ -35,10 +36,8 @@ function Productdetail() {
    <div className='lg:w-3/5 flex flex-col '>
    <Productimage productimg= {product.images}/>
    <div className='carts flex lg:w-full justify-center mt-4 mb-5 text-center  items-center '>
-   <button onClick={()=>AddCart(id,price,brand,image)} className='d-block lg:w-1/3 mx-2 py-2 font-semibold px-3 border border-slate-500 flex items-center justify-center hover:border-slate-800 hover:bg-slate-200'>
-   <FaShoppingCart/>
-   <span className='mx-2'>ADD TO CART</span>
-   </button>
+<AddtoCart productval = {[product.category,product.price,product.thumbnail]}/>
+
    <a href="/" aria-label='BUY NOW' className='d-block lg:w-1/3 mx-2  py-2 font-semibold px-3  bg-pinkbase text-textwhite flex items-center justify-center  hover:bg-pink-500' ><FaCheckDouble/> <span className='mx-2'>BUY NOW</span> </a>
    </div>
    </div>

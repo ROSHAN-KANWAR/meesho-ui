@@ -7,7 +7,7 @@ function ProductFetch({value,key}) {
     <div className="w-full  border border-slate-200" key={key}>
    <Link to={`/product-detail/${value.id}/${value.brand}/${value.category}/${value.title}`}>
     <div className="block relative h-48 rounded overflow-hidden" style={{zIndex:1}}>
-      <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={value.thumbnail} />
+      <img alt="ecommerce" loading="lazy" className="object-cover object-center w-full h-full block" src={value.thumbnail} />
     </div>
     <div className="mt-4 p-4">
       <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{value.title}</h3>
