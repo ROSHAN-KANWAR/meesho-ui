@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/meeshoui/static/css/main.6b7264ed.css",
+    "main.js": "/meeshoui/static/js/main.c337e74b.js",
+    "static/js/787.3dce9a58.chunk.js": "/meeshoui/static/js/787.3dce9a58.chunk.js",
+    "static/media/women.webp": "/meeshoui/static/media/women.e5e144f20b698f909da8.webp",
+    "static/media/MainImg.webp": "/meeshoui/static/media/MainImg.0b6754455aca7427bffe.webp",
+    "static/media/kids.webp": "/meeshoui/static/media/kids.171d2c68c01352d813d8.webp",
+    "static/media/mens.webp": "/meeshoui/static/media/mens.3d957b66e93576f54fc9.webp",
+    "index.html": "/meeshoui/index.html",
+    "main.6b7264ed.css.map": "/meeshoui/static/css/main.6b7264ed.css.map",
+    "main.c337e74b.js.map": "/meeshoui/static/js/main.c337e74b.js.map",
+    "787.3dce9a58.chunk.js.map": "/meeshoui/static/js/787.3dce9a58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b7264ed.css",
+    "static/js/main.c337e74b.js"
+  ]
+}
