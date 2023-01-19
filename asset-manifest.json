@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/meesho-ui/static/css/main.ca9a6ff2.css",
-    "main.js": "/meesho-ui/static/js/main.c40bc8e2.js",
+    "main.css": "/meesho-ui/static/css/main.54cbef33.css",
+    "main.js": "/meesho-ui/static/js/main.203a12a9.js",
     "static/js/787.3dce9a58.chunk.js": "/meesho-ui/static/js/787.3dce9a58.chunk.js",
     "static/media/women.webp": "/meesho-ui/static/media/women.e5e144f20b698f909da8.webp",
     "static/media/MainImg.webp": "/meesho-ui/static/media/MainImg.0b6754455aca7427bffe.webp",
     "static/media/kids.webp": "/meesho-ui/static/media/kids.171d2c68c01352d813d8.webp",
     "static/media/mens.webp": "/meesho-ui/static/media/mens.3d957b66e93576f54fc9.webp",
     "index.html": "/meesho-ui/index.html",
-    "main.ca9a6ff2.css.map": "/meesho-ui/static/css/main.ca9a6ff2.css.map",
-    "main.c40bc8e2.js.map": "/meesho-ui/static/js/main.c40bc8e2.js.map",
+    "main.54cbef33.css.map": "/meesho-ui/static/css/main.54cbef33.css.map",
+    "main.203a12a9.js.map": "/meesho-ui/static/js/main.203a12a9.js.map",
     "787.3dce9a58.chunk.js.map": "/meesho-ui/static/js/787.3dce9a58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca9a6ff2.css",
-    "static/js/main.c40bc8e2.js"
+    "static/css/main.54cbef33.css",
+    "static/js/main.203a12a9.js"
   ]
 }
