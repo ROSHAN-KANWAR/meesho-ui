@@ -1,31 +1,15 @@
-import React, { Fragment,useState,useEffect } from 'react'
+import React, { Fragment} from 'react'
 import MainImg from '../Photo/MainImg.webp'
 import Content from './Home/Content'
 import Topcategory from './Topcategory'
 import Product from '../Product/Product'
-import axios from 'axios';
-const baseurl = "https://dummyjson.com/products/?limit=40"
+import { GlobalProductContext } from '../Context/Productcontext'
 function Home() {
-  const [product,Setproduct] = useState([]) 
-  const [Isloading, setIsloading] = useState(false)
-  const Fetchs = async()=>{
-    try{
-      const res = axios.get(baseurl);
-      Setproduct((await res).data.products)
-      setIsloading(true)
-    }
-    catch(error)
-    {
- console.log(error.message)
-        }
-  }
-  useEffect(()=>{
-   Fetchs()
-  },[])
+  const {products ,isLoading}= GlobalProductContext()
+  
   return (
     <Fragment>
-
-    <div className='py-16 mt-5 max-w-6xl mx-auto px-4'>
+    <div className='md:py-16 sm:py-6 py-3 mt-5 max-w-6xl mx-auto px-4'>
     <div className='flex md:flex-row sm:flex-col-reverse flex-col-reverse justify-between items-center  mx-auto'>
     {/* main content*/}
    <Content/>
@@ -39,13 +23,14 @@ function Home() {
     <Topcategory/>
     </div>
  {
-    Isloading ?
-    <div className='py-16 mt-5 max-w-7xl mx-auto px-4'>
-    <Product foryou = "You" product={product} />
+    isLoading ?
+    <div className='md:py-16 sm:py-8 px-4 mt-5 max-w-7xl mx-auto md:px-4  sm:px-2 px-2 relative'>
+    <Product foryou = "You" product={products} />
     </div>
      :
-      <div className='flex items-center h-screen justify-center animate-spin'>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader-quarter" width="54" height="54" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <line x1="12" y1="6" x2="12" y2="3" /> <line x1="6" y1="12" x2="3" y2="12" /> <line x1="7.75" y1="7.75" x2="5.6" y2="5.6" /> </svg> 
+      <div className="flex  h-2/3 justify-center w-2/3 animate-spin">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader-quarter" width="54" height="54" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <line x1="12" y1="6" x2="12" y2="3" /> <line x1="6" y1="12" x2="3" y2="12" /> <line x1="7.75" y1="7.75" x2="5.6" y2="5.6" /> </svg> 
       </div>
   }
     </Fragment>

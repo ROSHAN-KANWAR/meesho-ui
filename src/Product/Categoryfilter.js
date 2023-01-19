@@ -58,7 +58,7 @@ function Categoryfilter() {
  </svg>
  </i>
  <div className='lg:w-full'>
- <input type="text" onKeyUp={Search} onChange={CatFilter} id="myinput" value={Ctfil} className='px-4 py-2  outline outline-offset-0 outline-0 w-full input-field' placeholder='Search' />
+ <input type="search" onKeyUp={Search} onChange={CatFilter} id="myinput" value={Ctfil} className='px-4 py-2  outline outline-offset-0 outline-0 w-full input-field' placeholder='Search' />
  </div>
     </div>
  </div>
@@ -66,7 +66,6 @@ function Categoryfilter() {
   Categoryss.map((ele ,index)=>{
     return(
       <div id="check" className="form-chec py-3 flex items-center" key={index}>
-      <input className="h-4 w-4 mx-2" type="checkbox" value="" id="flexCheckChecked3"  />
       <label id='label' style={{fontSize:'18px'}} className="label form-check-label inline-block text-gray-800 " htmlFor="flexCheckDefault3">
          {ele.name}
         </label>

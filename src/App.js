@@ -8,16 +8,15 @@ import ProductList from './ProductDetails/ProductList';
 import SearxhProduct from './Product/SearxhProduct'
 import AddtocartList from './ProductDetails/AddtocartList'
 function App() {
-
   return (
     <Fragment>
-    <Router basename="/meesho-ui">
-    <Header />
+    <Router>
+    <Header/>
     <Routes>
     <Route exact  path="/" element={<Home/>} />
     <Route exact path='/product-detail/:id/:brand/:category/:title' element={<Productdetail/>} />
     <Route exact path="/product-list/:category" element={<ProductList/>} /> 
-    <Route exact path="product-search/search=/:search" element={<SearxhProduct/>} /> 
+    <Route exact path="/product-search/search=/:search" element={<SearxhProduct/>} /> 
      <Route exact  path="/add-cart-list" element={<AddtocartList/>} />
     </Routes>
     </Router>

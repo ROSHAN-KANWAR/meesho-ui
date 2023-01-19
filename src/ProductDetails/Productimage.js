@@ -11,9 +11,9 @@ const [Imagechange, setImagechange] = useState(0)
 </div>
 <div className='grid grid-cols-5 py-4 gap-2 justify-center place-items-center  items-center  px-3'>
 {
-    productimg.map((curimg,index)=>{ 
+    Object.values(productimg).map((curimg,index)=>{ 
         return(
-            <figure>
+            <figure key={index}>
             <img loading='lazy' src={curimg} onClick={()=>setImagechange(index)} alt="roshan" className='w-16 h-16 border border-slate-300 mx-1' key={index}/>   
          </figure>
         )

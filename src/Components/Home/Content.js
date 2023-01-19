@@ -14,9 +14,9 @@ function Content() {
     <div className='flex items-center py-4 flex-wrap'>
 <HomeapiFetch/>
     </div>
-    <div className='lg:w-2/3 mt-4 px-4 py-2 bg-pinkbase text-textwhite rounded-md flex'>
+    <div className='lg:w-2/3 md:w-2/3 sm:w-full w-full mt-4 px-4 py-2 bg-pinkbase text-textwhite rounded-md flex'>
     <img  src='https://images.meesho.com/images/pow/playstoreSmallIcon.webp' loading='lazy' alt='playstrore icons for meesho app' />
-   <span style={{fontSize:'20px' ,fontWeight:'bold'}} className="mx-2">Download The Meesho App</span>
+   <span style={{fontSize:'15px' ,fontWeight:'bold'}} className="mx-2">Download The Meesho App</span>
     </div>
    </div>
     </div>

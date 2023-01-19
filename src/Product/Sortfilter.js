@@ -11,7 +11,7 @@ function Sortfilter() {
     <div className='rounded-md border border-slate-200 items-center py-2  flex px-2'>
     <span className='text-slate-700 lg:w-1/3'>Sort By :  </span>
     <div className="relative w-full lg:w-2/3">
-    <select className=" block outline outline-offset-0 bg-white outline-0 appearance-none w-full  py-2 px-4 pr-8 rounded " id="grid-state">
+    <select className="relativ  block outline outline-offset-0 bg-white outline-0 appearance-none w-full  py-2 px-4 pr-8 rounded " id="grid-state">
       <option>Recent</option>
       <option>Popular</option>
       <option>Rating</option>

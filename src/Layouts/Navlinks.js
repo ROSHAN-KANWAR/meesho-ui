@@ -97,7 +97,7 @@ window.addEventListener('resize' ,Setfixed)
   <div className={Menuclick? 'block container-xl mx-auto md:px-16 px-2 py-3 border-b-2 border-slate-300': 'md:block hidden  container-xl mx-auto md:px-16 px-2 py-3 border-b-2 border-slate-300'}>
   <div>
   
-  <nav className='flex md:flex-row sm:flex-col flex-col justify-center w-full '>
+  <nav className='flex md:flex-row sm:flex-col overflow-auto flex-col justify-center w-full '>
 {
   links.map((ele,index)=>{
 return(

@@ -3,7 +3,7 @@ import Essentialapi from '../../ApiData/Essentialapi'
 function Essential() {
   return (
     <Fragment>
-    <div className='md:flex justify-between py-24 mx-auto  px-6  items-center  bg-slate-100 py-12'>
+    <div className='md:flex justify-between md:py-24 sm:py-12 py-12 mx-auto  px-6  items-center  bg-slate-100 py-12'>
     {/* women */}
     <div className='lg:w-1/3 mx-2 lg:h-full flex justify-center'>
   <div>
