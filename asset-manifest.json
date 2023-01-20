@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/meesho-ui/static/css/main.81f2a3c6.css",
-    "main.js": "/meesho-ui/static/js/main.fd682030.js",
+    "main.js": "/meesho-ui/static/js/main.312ca1a9.js",
     "static/js/787.3dce9a58.chunk.js": "/meesho-ui/static/js/787.3dce9a58.chunk.js",
     "static/media/women.webp": "/meesho-ui/static/media/women.e5e144f20b698f909da8.webp",
     "static/media/MainImg.webp": "/meesho-ui/static/media/MainImg.0b6754455aca7427bffe.webp",
@@ -9,11 +9,11 @@
     "static/media/mens.webp": "/meesho-ui/static/media/mens.3d957b66e93576f54fc9.webp",
     "index.html": "/meesho-ui/index.html",
     "main.81f2a3c6.css.map": "/meesho-ui/static/css/main.81f2a3c6.css.map",
-    "main.fd682030.js.map": "/meesho-ui/static/js/main.fd682030.js.map",
+    "main.312ca1a9.js.map": "/meesho-ui/static/js/main.312ca1a9.js.map",
     "787.3dce9a58.chunk.js.map": "/meesho-ui/static/js/787.3dce9a58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.81f2a3c6.css",
-    "static/js/main.fd682030.js"
+    "static/js/main.312ca1a9.js"
   ]
 }
