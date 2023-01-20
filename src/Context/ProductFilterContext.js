@@ -1,4 +1,4 @@
-import {createContext, useContext,useEffect,useReducer} from 'react'
+import {createContext, useContext,useReducer} from 'react'
 import axios from 'axios';
 import reducer from '../Reducers/ProductFilterReducer'
 //initialstate value

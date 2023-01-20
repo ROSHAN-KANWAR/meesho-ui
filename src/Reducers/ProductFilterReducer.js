@@ -38,7 +38,7 @@ const ProductFilterReducer = (state,action) => {
 		case "FETCH_API_DATA_Category":
           return{
           	...state,
-          	isLoading:false,
+          	CisLoading:false,
           	Cateproducts:action.payload
           }
         default:

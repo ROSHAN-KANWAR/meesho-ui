@@ -2,19 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {BrowserRouter} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from './Context/Productcontext';
 import {FilterProvider} from './Context/ProductFilterContext'
-import {Card_Provider} from './Context/CardContext'
+import {CardProvider} from './Context/CardContext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+ <BrowserRouter>
  <AppProvider>
   <FilterProvider>
-  <Card_Provider>
+  <CardProvider>
     <App />
-    </Card_Provider>
+    </CardProvider>
   </FilterProvider>
     </AppProvider>
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

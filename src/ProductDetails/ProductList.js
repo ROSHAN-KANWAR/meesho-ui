@@ -1,16 +1,16 @@
-import React, { Fragment,useState,useEffect} from 'react'
+import React, { Fragment,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import Product from '../Product/Product'
 
 import { useProductFilter } from '../Context/ProductFilterContext'
-import axios from 'axios';
+
 function ProductList() {
  const{category} = useParams();
- const {Cateproducts, CisLoading,Categoryproductapis}= useProductFilter();
+ const {Cateproducts,Categoryproductapis}= useProductFilter();
   useEffect(()=>{
    Categoryproductapis(`https://dummyjson.com/products/category/${category}`);
-  },[Cateproducts])
-
+  })
+ 
   return (
     <>
    

@@ -3,7 +3,14 @@ const CardReducer = (state,action) => {
 	
 	if (action.type === "cart_to_cart"){
 		const{id,price,brand,thumbnail,title} = action.payload
-	
+	console.log(action.payload.title)
+	let existitem = state.cart.find((curitem)=>curitem.id === action.payload.id)
+	if(existitem){
+    
+	}
+	else{
+
+
 	let cardproduct;
 	cardproduct={
 		id:id,
@@ -16,9 +23,20 @@ const CardReducer = (state,action) => {
 		...state,
 		cart:[...state.cart ,cardproduct],
 	};
-
-
 }
+}
+
+						if (action.type === "cart_to_remove"){
+							
+								let removesitem  = state.cart.filter((ele)=>{
+									return ele.id !== action.payload
+								})
+							return{
+								...state,
+								cart:removesitem,
+							};
+
+						}
   return state;
 
 };

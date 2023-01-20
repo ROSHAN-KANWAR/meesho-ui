@@ -11,11 +11,11 @@ function Productdetail() {
   const {id} = useParams();
 const { isSingleLoading,Singleproducts,Singleproductapis}= GlobalProductContext()
 
-  const {images,title,category,discountPercentage,price,rating,thumbnail,description,brand} = Singleproducts
+  const {images,title,category,discountPercentage,price,rating,description,brand} = Singleproducts
   
   useEffect(()=>{
    Singleproductapis(`${API}${id}`)
-  },[]);
+  });
   
   return (
    <Fragment>

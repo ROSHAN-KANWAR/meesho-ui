@@ -6,10 +6,9 @@ function Searchbox() {
   const [term, setterm] = useState("")
   const navigate= useNavigate();
 const Hands=(e)=>{
-  e.preventDefault();
+ e.preventDefault();
   navigate(`product-search/search=/${term}`)
   setterm("")
-  window.location.reload()
 }
   return (
     <Fragment>
