@@ -7,12 +7,12 @@ function Categorycom({name,dataapi}) {
   <Fragment>
   <div className='flex justify-between items-center' >
    <span className='d-block text-slate-800' style={{fontSize:'20px' ,fontWeight:'bold'}}>{name}</span>
-   <div class="cursor-pointer">
+   <div className="cursor-pointer">
        <span onClick={()=>{setfirst(!first)}}>{first?<FaChevronDown/> :<FaChevronUp/>}</span>
      </div>
    </div>
    { first &&  <div className='py-2'>
-   <div class=" flex flex-wrap py-2 relative">
+   <div className=" flex flex-wrap py-2 relative">
    {
     dataapi.map((ele)=>{
    return(

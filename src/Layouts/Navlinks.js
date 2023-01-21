@@ -108,7 +108,7 @@ return(
  {ele.sublinks.map((old ,ind)=>{
   return(
     <Fragment>
-   <Link to={`/product-list/${ele.name}`}  onClick={()=>setMenuclick(!Menuclick)}><li key={ind} className="py-2 bg-slate-200 px-4">{old.Heads}</li></Link> 
+   <Link to={`/product-list/${ele.name}`} key={ind} onClick={()=>setMenuclick(!Menuclick)}><li  className="py-2 bg-slate-200 px-4">{old.Heads}</li></Link> 
     {old.Submenu && <div>
 {
   old.Submenu.map((submenu,index)=>{

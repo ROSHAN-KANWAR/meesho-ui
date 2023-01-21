@@ -1,18 +1,18 @@
-import {createContext, useContext,useEffect,useReducer} from 'react'
+import {createContext, useContext,useReducer} from 'react'
 import reducer from '../Reducers/CardReducer'
 //initialstate value
-const getLocalData=()=>{
-   let newcart = localStorage.getItem("Meesho-cart");
-   if(newcart === []){
-    return [];
-   }
-   else{
-    return JSON.parse(newcart);
-   }
-}
+// const getLocalData=()=>{
+//    let newcart = localStorage.getItem("Meesho-cart");
+//    if(newcart === []){
+//     return [];
+//    }
+//    else{
+//     return JSON.parse(newcart);
+//    }
+// }
 const initialState = {
-    //cart:[],
-    cart: getLocalData(),
+    cart:[],
+    //cart: getLocalData(),
     total :"",
     amount:"",
     ship:400,
@@ -35,9 +35,9 @@ const ItemRemover=(id)=>{
 }
 
 //save item in local storage
-useEffect(()=>{
-    localStorage.setItem("Meesho-cart" ,JSON.stringify(state.cart))
-},[state.cart])
+// useEffect(()=>{
+//     localStorage.setItem("Meesho-cart" ,JSON.stringify(state.cart))
+// },[])
     return (
         <CardContext.Provider value={{...state,Cartadd ,ItemRemover}}>
     {children}

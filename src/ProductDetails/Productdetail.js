@@ -9,7 +9,7 @@ import { GlobalProductContext } from '../Context/Productcontext'
 const API = "https://dummyjson.com/products/"
 function Productdetail() {
   const {id} = useParams();
-const { isSingleLoading,Singleproducts,Singleproductapis}= GlobalProductContext()
+const { Singleproducts,Singleproductapis}= GlobalProductContext()
 
   const {images,title,category,discountPercentage,price,rating,description,brand} = Singleproducts
   
@@ -19,8 +19,6 @@ const { isSingleLoading,Singleproducts,Singleproductapis}= GlobalProductContext(
   
   return (
    <Fragment>
-   {
-   isSingleLoading ?
    <div className='px-4 max-w-7xl  mx-auto py-12'>
    <div className='flex lg:flex-row flex-col'>
    {/* for product iamage */}
@@ -41,7 +39,7 @@ const { isSingleLoading,Singleproducts,Singleproductapis}= GlobalProductContext(
        <span className='text-xl py-2 block'>{title}</span>
        <div className='py-3 flex'>
        <span  className='mx-2'><b className='flex items-center text-2xl'><FaRupeeSign/>{price}</b></span>
-       <spna className='mx-2'><del>{Math.ceil((price*discountPercentage)/100) + price}</del></spna>
+       <span className='mx-2'><del>{Math.ceil((price*discountPercentage)/100) + price}</del></span>
        <span className='mx-2 text-greenbase'><b>{discountPercentage}% off</b></span>
        </div>
 <ProductStar starval = {rating} />
@@ -61,11 +59,7 @@ const { isSingleLoading,Singleproducts,Singleproductapis}= GlobalProductContext(
       </div>
           {/* end PRODUCT DETAILS */}
    </div>
-   </div>  :
-      <div className='flex items-center h-screen justify-center animate-spin'>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader-quarter" width="54" height="54" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <line x1="12" y1="6" x2="12" y2="3" /> <line x1="6" y1="12" x2="3" y2="12" /> <line x1="7.75" y1="7.75" x2="5.6" y2="5.6" /> </svg> 
-      </div>
-  }
+   </div>  
    </Fragment>
  
   )

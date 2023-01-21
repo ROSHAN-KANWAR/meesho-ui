@@ -1,11 +1,11 @@
 import React,{Fragment} from 'react'
 import {FaRupeeSign} from "react-icons/fa";
 import { Link} from 'react-router-dom';
-function ProductFetch({value,keys}) {
+function ProductFetch({value}) {
   
   return (
     <Fragment>
-    <div className="w-full  border border-slate-200 relative" key={keys}>
+    <div className="w-full  border border-slate-200 relative">
    <Link to={`/product-detail/${value.id}/${value.brand}/${value.category}/${value.title}`}>
     <div className=" h-48 rounded overflow-hidden" style={{zIndex:1}}>
       <img alt="ecommerce" loading="lazy" className="relative object-cover object-center w-full h-full block" src={value.thumbnail} />
@@ -18,7 +18,7 @@ function ProductFetch({value,keys}) {
   
       </div>
       <b className='text-green-600 mx-2'>{value.discountPercentage}% off</b>
-      <p class="mt-1 bg-slate-200 px-2 py-1 text-xs rounded-full lg:w-1/2 md:w-full w-full">Free Delivery</p>
+      <p className="mt-1 bg-slate-200 px-2 py-1 text-xs rounded-full lg:w-1/2 md:w-full w-full">Free Delivery</p>
     <div className='py-3'>
     <h4>
     <span className='mt-3 mx-2 rounded-full bg-green-600 text-white px-4 py-1 text-md'>{value.rating} </span>

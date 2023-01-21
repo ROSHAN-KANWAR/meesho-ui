@@ -1,15 +1,17 @@
 import React,{Fragment} from 'react'
 import {useCardContext } from '../Context/CardContext'
 import {FaRupeeSign} from "react-icons/fa";
+import { Link } from 'react-router-dom'
 const ContextcartList = () => {
+  
   const {cart ,ItemRemover}=useCardContext();
-
+ if(cart.length!==0){
   return (
-		<Fragment>	
-		 <div class="container lg:px-8 md:px-4 sm:px-2 px-2  mx-auto  bg-slate-50">
-      <div class="w-full overflow-x-auto">
-        <div class="my-2 mt-3">
-          <h3 class="text-xl font-bold tracking-wider">Shopping Cart {cart.length} item</h3>
+    <Fragment>  
+     <div className="container lg:px-8 md:px-4 sm:px-2 px-2  mx-auto  bg-slate-50">
+      <div className="w-full overflow-x-auto">
+        <div className="my-2 mt-3">
+          <h3 className="text-xl font-bold tracking-wider">Shopping Cart 0 item</h3>
           </div>
 
 <div className='flex md:flex-row flex-col'>
@@ -91,14 +93,21 @@ const ContextcartList = () => {
 </div>
 
 </div>
-
-
-
-      </div>
+    </div>
     </div>
     
-		</Fragment>
-	)
+    </Fragment>
+  )
+ }
+ else{
+  return (<div className='px-3 flex justify-center  mt-4'>
+    <Link to ="/">
+<button  className='px-4 py-2 bg-pinkbase text-white font-semibold text-xl rounded-md'>Shopping</button>
+</Link>
+</div>
+)
+ }
+  
 }
 
 export default ContextcartList
